@@ -70,9 +70,9 @@ class InventoryParser:
 def main(arg):
 
 	nb = NBTParser(arg)
-	nb.parse()	
-	l = nb.root.findByName('Inventory')
-	
+	nb.parse()
+	l = []
+	nb.root.findByName('Inventory', l)
 
 	if len(l)>0:
 		inventoryParser = InventoryParser(l[0])

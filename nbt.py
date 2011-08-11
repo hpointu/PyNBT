@@ -36,15 +36,15 @@ class NBTNode:
 		
 		return s
 
-	def findByName(self, needle, list = []):
+	def findByName(self, needle, l):
 		
 		if self.count:
 			for n in self.value:
-				n.findByName(needle, list)
+				n.findByName(needle, l)
 		
 		if self.name == needle:
-			list.append(self)
-		return list
+			l.append(self)
+
 
 class NBTParser:
 	# constant
